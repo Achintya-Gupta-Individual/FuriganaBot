@@ -36,13 +36,13 @@ class ClipboardEventHandler(FileSystemEventHandler):
 				print("path exists: ", os.path.exists(file_name))
 				print("it is a file: ", os.path.isfile(file_name))
 				print("file size is: ", os.path.getsize(file_name))
-				# Loads the image into memory
+				# Loads the image into memory (TODO: get this from the clipboard directly instead)
 				with io.open(file_name, 'rb') as image_file:
 					content = image_file.read()
 				
 				image = vision.Image(content=content)
 
-				# Performs label detection on the image file
+				# Performs text detection on the image file
 				response = client.text_detection(image=image, image_context={"language_hints": ["ja"]})
 				print(response.full_text_annotation.text)
 				pyperclip.copy(response.full_text_annotation.text)
