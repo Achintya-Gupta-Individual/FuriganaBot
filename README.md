@@ -1,6 +1,6 @@
 # FuriganaBot
 It's a pretty roughshod amalgamation of a number of libraries, so it's going to be jank. LMK if you know any quick improvements. 
-1. Follow [this](https://cloud.google.com/vision/docs/setup), it'll give you a key file, assign the path to the environment variable "GOOGLE_APPLICATION_CREDENTIALS" on line 8. You'll need to put in payment details for this, but you'll only be charged if you do more than a 1000 requests (images) - and then it's still pretty cheap. 
+1. Follow [this](https://cloud.google.com/vision/docs/setup), it'll give you a key file, assign the path to the environment variable "GOOGLE_APPLICATION_CREDENTIALS" on line 8. You'll need to put in payment details for this, but you'll only be charged if you do more than a 1000 requests per month (images) - and then it's still pretty cheap. 
 2. Install the necessary dependancies in terminal: 
 ```pip install --upgrade google-cloud-vision watchdog pyperclip```
 3. Install [yomichan](https://chrome.google.com/webstore/detail/yomichan/ogmnaimimemjmbakcfefmnahgdfhfami?hl=en-US) on your browser and enable clipboard text monitoring. 
